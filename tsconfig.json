@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022", "DOM"],
+    "strict": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "composite": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true
+  },
+  "references": [
+    { "path": "./packages/test-api" },
+    { "path": "./packages/bridge" },
+    { "path": "./packages/driver" },
+    { "path": "./packages/runner" },
+    { "path": "./packages/visual" },
+    { "path": "./apps/example-tests" }
+  ]
+}

@@ -1,0 +1,10 @@
+export { SpectraTestContext } from './spectra-context';
+export type { SpectraTestContextOptions, SpectraTestContextWithSharedBridgeOptions, } from './spectra-context';
+export { waitFor, waitForFocus, waitForRoute } from './wait-for';
+export type { WaitForOptions } from './wait-for';
+export { focused, focusedPath, focusedText, isVisible, getElement, currentRoute, getVisibleElements, } from './queries';
+export type { SpectraContext } from './queries';
+export { assertFocused, assertFocusedText, assertVisible, assertNotVisible, assertRoute, assertMeta, } from './assertions';
+export type { TypeTextOptions } from '@spectra/driver';
+export { test, expect } from './playwright-fixture';
+export type { SpectraFixtures, SpectraFixtureOptions, SpectraWorkerFixtures, } from './playwright-fixture';

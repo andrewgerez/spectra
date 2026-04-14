@@ -1,0 +1,14 @@
+{
+  "name": "@spectra/test-api",
+  "version": "0.1.0",
+  "description": "In-app TEST_API instrumentation",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "peerDependencies": {
+    "@lightningtv/solid": ">=2.0.0",
+    "solid-js": ">=1.9.0"
+  }
+}

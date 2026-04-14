@@ -1,0 +1,24 @@
+--- a/src/app/index.tsx
++++ b/src/app/index.tsx
+@@ -1,4 +1,8 @@
+ import '@/shared/services/api/http-client.service';
++
++// Spectra test instrumentation — no-op unless VITE_SPECTRA_ENABLED=true
++import { maybeInstallTestAPI } from '@spectra/test-api';
++import { maybeStartBridgeClient } from '@spectra/bridge/client';
++
+ import { config } from '@devices/common';
+ import {
+   createRenderer,
+@@ -33,6 +37,11 @@
+ googleAnalyticsService.init();
+ clarityService.init();
+
++// Install Spectra TEST_API before the renderer boots so that the first focus
++// event (which fires synchronously during render) is captured.
++maybeInstallTestAPI();
++maybeStartBridgeClient();
++
+ merge(LightningConfig, config.lightning);
+
+ const { render } = createRenderer();

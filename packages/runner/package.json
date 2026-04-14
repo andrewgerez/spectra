@@ -1,0 +1,22 @@
+{
+  "name": "@spectra/runner",
+  "version": "0.1.0",
+  "description": "Test helpers: waitFor, state queries, assertions, and the SpectraContext fixture",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@spectra/bridge": "file:../bridge",
+    "@spectra/driver": "file:../driver",
+    "@spectra/test-api": "file:../test-api"
+  },
+  "peerDependencies": {
+    "vitest": ">=2.0.0",
+    "@playwright/test": ">=1.44.0"
+  },
+  "peerDependenciesMeta": {
+    "@playwright/test": { "optional": true }
+  }
+}

@@ -1,0 +1,23 @@
+--- a/src/app/app.tsx
++++ b/src/app/app.tsx
+@@ -1,4 +1,7 @@
+ import { JSX, View } from '@lightningtv/solid';
++
++// Spectra tracking hooks — no-op unless VITE_SPECTRA_ENABLED=true and window.__TEST_API__ exists
++import { useSpectraFocusTracking, useSpectraRouteTracking } from '@spectra/test-api';
++
+ import { useAnnouncer } from '@lightningtv/solid/primitives';
+ import { RouteSectionProps, useLocation, useNavigate } from '@solidjs/router';
+ ...
+@@ -44,6 +47,10 @@
+   createPageTracking();
+   createUserTracking();
+   createRouteChangeTracker();
+   createConnectivityMonitor();
+   createWebGLContextRecovery();
++
++  // Spectra: wire focus and route change notifications into TEST_API
++  useSpectraFocusTracking();
++  useSpectraRouteTracking();
++
+   const isPlayerRoute = () => location.pathname.includes(ROUTES.PLAYER);

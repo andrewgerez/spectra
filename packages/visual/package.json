@@ -1,0 +1,21 @@
+{
+  "name": "@spectra/visual",
+  "version": "0.1.0",
+  "description": "Visual regression testing: screenshot diff (pixelmatch) and OCR fallback (Tesseract)",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "pixelmatch": "^5.3.0",
+    "pngjs": "^7.0.0",
+    "tesseract.js": "^5.0.5"
+  },
+  "devDependencies": {
+    "@types/pngjs": "^6.0.4"
+  },
+  "peerDependencies": {
+    "playwright": ">=1.44.0"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@spectra/example-tests",
+  "version": "0.1.0",
+  "description": "Example Spectra tests",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:auth": "playwright test src/auth",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@spectra/runner": "file:../../packages/runner",
+    "@spectra/visual": "file:../../packages/visual",
+    "@spectra/test-api": "file:../../packages/test-api"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "vitest": "^2.0.0"
+  }
+}
