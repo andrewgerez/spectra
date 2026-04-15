@@ -41,7 +41,3 @@ Point `apps/example-tests` at your dev server URL via Playwright config / `spect
 npm run build
 npm run typecheck
 ```
-
-## License
-
-Private / internal unless otherwise stated in `package.json` or your organization’s policy.
